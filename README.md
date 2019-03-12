@@ -6,11 +6,9 @@ A Bitcoin full node for building applications and services with Node.js. A node 
 ## Install
 
 ```bash
-npm install -g bitcore-node
+npm install -g git://github.com/Fair-Exchange/bitcore-node-safecoin.git
 bitcore-node start
 ```
-
-Note: For your convenience, we distribute bitcoind binaries for x86_64 Linux and x86_64 Mac OS X. Upon npm install, the binaries for your platform will be downloaded. For more detailed installation instructions, or if you want to compile the project yourself, then please see the Bitcore branch of [Bitcoin Core with additional indexing](https://github.com/bitpay/bitcoin/tree/0.12.1-bitcore).
 
 ## Prerequisites
 
@@ -37,9 +35,9 @@ This will create a directory with configuration files for your node and install 
 
 There are several add-on services available to extend the functionality of Bitcore:
 
-- [Insight API](https://github.com/bitpay/insight-api)
-- [Insight UI](https://github.com/bitpay/insight-ui)
-- [Bitcore Wallet Service](https://github.com/bitpay/bitcore-wallet-service)
+- [Insight API](https://github.com/Fair-Exchange/insight-api-safecoin/)
+- [Insight UI](https://github.com/Fair-Exchange/insight-api-safecoin/)
+- [Bitcore Wallet Service](https://github.com/Fair-Exchange/bitcore-wallet-service-safecoin)
 
 ## Documentation
 
@@ -58,7 +56,7 @@ Please send pull requests for bug fixes, code optimization, and ideas for improv
 
 ## License
 
-Code released under [the MIT license](https://github.com/bitpay/bitcore-node/blob/master/LICENSE).
+Code released under [the MIT license](https://github.com/fair-exchange/bitcore-node-safecoin/blob/master/LICENSE).
 
 Copyright 2013-2015 BitPay, Inc.
 
