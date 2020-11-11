@@ -1,17 +1,23 @@
 {
   "name": "bitcore-node-safecoin",
-  "description": "Full node with extended capabilities using Bitcore and Zcash",
+  "description": "Full node with extended capabilities using Bitcore and Safecoin",
   "author": "BitPay <dev@bitpay.com>",
-  "version": "3.1.2",
+  "version": "3.3.0",
   "main": "./index.js",
-  "repository": "git+https://github.com/Fair-Exchange/bitcore-node-safecoin.git",
+  "repository": "git://github.com/Fair-Exchange/bitcore-node-safecoin.git",
   "homepage": "https://github.com/Fair-Exchange/bitcore-node-safecoin",
   "bugs": {
-    "url": "https://github.com/bitpay/bitcore-node/issues"
+    "url": "https://github.com/Fair-Exchange/bitcore-node-safecoin/issues"
   },
   "contributors": [
     {
+      "name": "Fair-Exchange"
+    },
+    {
       "name": "Christopher Jeffrey"
+    },
+    {
+      "name": "Aayanl"
     },
     {
       "name": "Braydon Fuller",
@@ -28,6 +34,22 @@
     {
       "name": "Jack Grigg",
       "email": "jack@z.cash"
+    },
+    {
+      "name": "Larry Ludlow",
+      "email": "larry@myhush.org"
+    },
+    {
+      "name": "TheTrunk",
+      "email": "tadeas.kmenta@zel.cash"
+    },
+    {
+      "name": "Simon Liu",
+      "email": "simon@z.cash"
+    },
+    {
+      "name": "Ian Munoz",
+      "email": "ian.org@gmail.com"
     }
   ],
   "bin": {
@@ -45,40 +67,40 @@
     "safecoind"
   ],
   "dependencies": {
-    "async": "^1.3.0",
-    "bitcoind-rpc": "^0.6.0",
-    "bitcore-lib-safecoin": "git+https://github.com/Fair-Exchange/bitcore-lib-safecoin",
-    "body-parser": "^1.13.3",
+    "async": "^2.5.0",
+    "bitcore-lib-safecoin": "Fair-Exchange/bitcore-lib-safecoin",
+    "bitcoind-rpc": "Fair-Exchange/bitcoind-rpc",
+    "body-parser": "^1.18.3",
     "colors": "^1.1.2",
     "commander": "^2.8.1",
     "errno": "^0.1.4",
-    "express": "^4.13.3",
+    "express": "^4.16.3",
     "liftoff": "^2.2.0",
-    "lru-cache": "^4.0.1",
-    "mkdirp": "0.5.0",
+    "lru-cache": "^4.1.1",
+    "mkdirp": "0.5.5",
     "npm": "^2.14.1",
     "path-is-absolute": "^1.0.0",
     "semver": "^5.0.1",
-    "socket.io": "^1.4.5",
-    "socket.io-client": "^1.4.5",
-    "zmq": "^2.14.0"
+    "socket.io": "^2.2.0",
+    "socket.io-client": "^2.2.0",
+    "zeromq": "^5.2.0"
   },
   "optionalDependencies": {
-    "bufferutil": "~1.2.1",
-    "utf-8-validate": "~1.2.1"
+    "bufferutil": "~4.0.1",
+    "utf-8-validate": "~5.0.2"
   },
   "devDependencies": {
     "benchmark": "1.0.0",
     "bitcore-p2p": "^1.1.0",
-    "chai": "^3.5.0",
+    "chai": "^4.2.0",
     "coveralls": "^2.11.9",
-    "istanbul": "^0.4.3",
+    "istanbul": "^0.4.5",
     "jshint": "^2.9.2",
     "jshint-stylish": "^2.1.0",
-    "mocha": "^2.4.5",
+    "mocha": "^5.2.0",
     "proxyquire": "^1.3.1",
     "rimraf": "^2.4.2",
-    "sinon": "^1.15.4"
+    "sinon": "^7.1.1"
   },
   "license": "MIT"
 }
