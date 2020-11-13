@@ -12,6 +12,29 @@ wget -qO- https://raw.githubusercontent.com/Fair-Exchange/bitcore-node-safecoin/
 ```bash
 wget -qO- https://raw.githubusercontent.com/Fair-Exchange/bitcore-node-safecoin/master/installExplorer.sh | bash
 ```
+## Explorer service management
+
+To stop the service, dial:
+```
+systemctl stop explorer
+```
+To start the service, dial:
+```
+systemctl start explorer
+```
+To restart the service, dial:
+```
+systemctl restart explorer
+```
+To view the service status, dial:
+```
+systemctl status explorer
+```
+You may find it convenient to view the logged messages directly in the CLI. (To stop viewing in the journal reader, press CTRL + C):
+```
+journalctl -lf -u explorer
+```
+
 ## Install
 
 ```bash

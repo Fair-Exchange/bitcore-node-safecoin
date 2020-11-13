@@ -1,0 +1,12 @@
+# copy this file to /lib/systemd/system/
+[Unit]
+Description=Safecoin explorer
+After=network-online.target
+
+[Service]
+Restart=on-failure
+WorkingDirectory=/root/bitcore-node-safecoin/bin/explorer/
+ExecStart=node /root/bitcore-node-safecoin/bin/bitcore-node start
+
+[Install]
+WantedBy=multi-user.target
