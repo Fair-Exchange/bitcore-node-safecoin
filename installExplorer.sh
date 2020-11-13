@@ -5,12 +5,15 @@
 cd
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y nodejs
+sudo apt-get install -y npm
 sudo apt-get install -y build-essential
 sudo apt-get install -y libzmq3-dev
 
-# MongoDB (Ubuntu 18)
 wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
+# MongoDB (Ubuntu 18)
 echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
+# MongoDB (Ubuntu 20)
+#echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
 sudo apt-get update
 sudo apt-get install -y mongodb-org
 sudo systemctl enable mongod
@@ -24,8 +27,8 @@ npm install
 cd bin
 chmod +x bitcore-node
 cp ~/safecoin/src/safecoind ~/bitcore-node-safecoin/bin
-./bitcore-node create mynode
-cd mynode
+./bitcore-node create explorer
+cd explorer
 
 rm bitcore-node.json
 
@@ -110,6 +113,13 @@ cd insight-ui-safecoin
 npm install
 cd ..
 cd ..
+cd ..
+cd ..
+chmod +x explorer.service
+ln -s explorer.service /lib/systemd/system/explorer.service
+systemctl daemon-reload
+systemctl enable explorer
+systemctl restart explorer
 
 echo "Explorer is installed"
-echo "Then to start explorer navigate to mynode folder and type ../bitcore-node start. Explorer will be accessible on localhost:3001" 
+echo "To manually start the explorer, stop the serviceс explorer (systemctl stop explorer) and go to the explorer folder (bitcore-node-safecoin/bin/explorer) and type ../bitcore-node start. Explorer will be available at localhost: 3001"
